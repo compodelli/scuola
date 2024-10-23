@@ -1,0 +1,80 @@
+<html>
+<style>
+    body{
+        background-color: rgb(119, 43, 226);
+    }
+    #div1{
+        width: 70%;
+        height: 15%;
+        margin-left: 15%;
+        background-color: aquamarine;
+        border-radius: 70px;
+        position: absolute;
+        margin-top: 10%;
+        overflow: hidden;
+
+        }
+        #div2{
+            text-align: center;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(42, 149, 165);
+            color: white;
+            float: left;
+            
+        }
+        #div3{
+            text-align: center;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(42, 149, 165);
+            float: left;
+            
+        }
+        #div4{
+            text-align: center;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(42, 149, 165);
+            color: white;
+            float: left;
+
+        }
+        #div5{
+            text-align: center;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            color: rgb(42, 149, 165);
+            float: right;
+            
+        }
+        
+
+        
+
+</style>
+<body>
+    <h1 style="text-align: center;color: white;margin-top: 5%;" >I TUOI DATI</h1>
+    <div id="div1">
+        <div id="div2"><p>nome</p><h1 id="nomeDiv"></h1></div>
+        <div id="div3"><p>cognome</p><h1 id="cognomeDiv"></h1></div>
+        <div id="div4"><p>email</p><h1 id="mailDiv"></h1></div>
+        <div id="div5"><p>data di nascita</p><h1 id="nascitaDiv"></h1></div>
+    </p></div>
+    
+</body>
+
+<script>
+    var parametri=localStorage.getItem("valori");
+    var oggetto = JSON.parse(parametri);
+    document.getElementById("nomeDiv").innerHTML = oggetto.nome ;
+    document.getElementById("cognomeDiv").innerHTML =oggetto.cognome;
+    document.getElementById("mailDiv").innerHTML = oggetto.mail ;
+    document.getElementById("nascitaDiv").innerHTML = oggetto.nascita;
+    
+
+</script>
+
+</html>

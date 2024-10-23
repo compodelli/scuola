@@ -1,0 +1,84 @@
+<html>
+
+<style>
+  #div1{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 15px;
+    width: 20%;
+    height: 61%;
+    margin-top: 5%;
+    margin-left: 38%;
+    position: absolute;
+  }
+  #nome,#cognome,#mail{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 0px;
+    width: 60%;
+  }
+  #nascita{
+    border: 0px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 55%;
+  }
+  #form1{
+    background-color: rgb(42, 149, 165);
+    margin-top:10%;
+  }
+  body{
+    background-color: rgb(119, 43, 226);
+  }
+  #bott{
+    border-radius: 20%;
+    border: 0px;
+    margin-top: 5%;
+    background-color: rgb(42, 149, 165);
+    font-size: larger;
+    color: white;
+  }
+
+
+
+</style>
+
+<body>
+
+<div id="div1">
+  <h1>REGISTRATI</h1>
+  <form id="form1">
+    <br>
+    <label for="nome">Nome</label><br>
+    <input type="text" id="nome" name="nome"><br><br>
+    <label for="cognome">Cognome</label><br>
+    <input type="text" id="cognome" name="cognome"><br><br>
+    <label for="mail">Mail</label><br>
+    <input type="email" id="mail" name="mail"><br><br>
+    <label for="nascita">Data di nascita</label><br>
+    <input type="date" id="nascita" name="nascita"><br><br>
+    <br><br>
+  </form> 
+  <input type="button" id="bott" value="INVIA" onclick="passaggio()">
+</div>
+
+
+</body>
+
+<script>
+
+    function passaggio() {
+      
+      var Vnome=document.getElementById("nome").value
+      var Vcognome=document.getElementById("cognome").value
+      var Vmail=document.getElementById("mail").value
+      var Vnascita=document.getElementById("nascita").value
+
+      const miOggetto = {nome: Vnome, cognome: Vcognome, mail : Vmail, nascita : Vnascita};
+      let myJSON = JSON.stringify(miOggetto);
+      localStorage.setItem("valori",myJSON);
+      document.location.href="a2.html";
+      
+    }
+</script>
+</html>
