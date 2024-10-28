@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Accattivante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            margin: 15px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC107;
+        }
+
+        section {
+            padding: 60px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        #home {
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        #about {
+            background-image: url('https://source.unsplash.com/1600x900/?city');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        #services {
+            background-image: url('https://source.unsplash.com/1600x900/?technology');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        #contact {
+            background-image: url('https://source.unsplash.com/1600x900/?business');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #FFC107;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #FF9800;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Benvenuto nella Mia Homepage Accattivante</h1>
+        <nav>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#about"><i class="fas fa-user"></i> Chi Sono</a>
+            <a href="#services"><i class="fas fa-cogs"></i> Servizi</a>
+            <a href="#contact"><i class="fas fa-envelope"></i > Contatto</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Benvenuto nella Mia Homepage</h2>
+        <p>Questa è la mia homepage accattivante, dove potrai scoprire di più su di me e sui miei servizi.</p>
+        <button class="button">Scopri di più</button>
+    </section>
+
+    <section id="about">
+        <h2>Chi Sono</h2>
+        <p>Sono un professionista con anni di esperienza nel mio campo.</p>
+        <button class="button">Leggi di più</button>
+    </section>
+
+    <section id="services">
+        <h2>Servizi</h2>
+        <p>Offro una gamma di servizi per aiutare le aziende a raggiungere i loro obiettivi.</p>
+        <button class="button">Scopri i miei servizi</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contatto</h2>
+        <p>Se hai bisogno di aiuto o hai una domanda, non esitare a contattarmi.</p>
+        <button class="button">Contattami</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Accattivante Homepage</p>
+    </footer>
+
+</body>
+</html>
