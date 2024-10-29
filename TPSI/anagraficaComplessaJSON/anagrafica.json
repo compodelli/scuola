@@ -1,0 +1,30 @@
+[
+    {
+        "nome":"Ayoub",
+        "cognome":"El Koraichi",
+        "CF":"GHTUIJ0SJU87",
+        "mail":"ayoub@gmail.com",
+        "cellulare":"3714330790"
+    },
+    {
+        "nome":"Marco",
+        "cognome":"Rossi",
+        "CF":"GHT876GTYU8W",
+        "mail":"marco@gmail.com",
+        "cellulare":"3215567690"
+    },
+    {
+        "nome":"Leonardo",
+        "cognome":"Verdi",
+        "CF":"ASDLK09IJH6D",
+        "mail":"leonardo@gmail.com",
+        "cellulare":"3457865412"
+    },
+    {
+        "nome":"Tiberio",
+        "cognome":"Bianchi",
+        "CF":"GFTUO98JU76F",
+        "mail":"tiberio@gmail.com",
+        "cellulare":"3241245678"
+    }
+]
