@@ -1,0 +1,38 @@
+[
+    {
+        "nome":"Ayoub",
+        "cognome":"El Koraichi",
+        "CF":"LKRYBA06C03C933U",
+        "indirizzo":"Via prima strada 7", 
+        "contatti":[{
+            "mail":"elkoraichiayoub@gmail.com",
+            "mobile":"3714330790"
+        }],
+        "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/Ayoub.jpg",
+        "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ayoub.json"
+    },
+    {
+        "nome":"Gabriele",
+        "cognome":"Ghidoni",
+        "CF":"GBRGDN04P21H264J",
+        "indirizzo":"via raffaello sanzio 11", 
+        "contatti":[{
+            "mail":"ghidoni.gabriele@itiscannizzaro.edu.it",
+            "mobile":"3456545676"
+        }],
+        "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/Ghi.JPG",
+        "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ghidoni.json"
+    },
+    {
+        "nome":"CHAT",
+        "cognome":"GPT",
+        "CF":"CHTGT15SFR10SCO0",
+        "indirizzo":"Corso Stati Uniti", 
+        "contatti":[{
+            "mail":"copiamo@chatgpt.com",
+            "mobile":"0230458074"
+        }],
+        "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/chat.png",
+        "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/chat.json"
+    }
+]

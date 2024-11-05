@@ -1,0 +1,11 @@
+[
+    {
+        "nome": "Gabriele",
+        "cognome": "Ghidoni",
+        "foto": "https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/Ghi.JPG",
+        "telefono": "3456545676",
+        "mail": "ghidoni.gabriele@itiscannizzaro.edu.it",
+        "data nascita": "21/09/2004",
+        "formazione scolastica": "ITIS Cannizzaro Rho dal 2019-in corso"
+    }
+]
