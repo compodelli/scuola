@@ -1,0 +1,67 @@
+<html>
+    <style>
+        #left{
+            float: left;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(83, 82, 82);
+            text-align: center;
+        }
+        #right{
+            float: right;
+            width: 75%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        img{
+            width: 60%;
+        }
+        h1{
+            color: antiquewhite;
+            font-size:40px;
+        }
+        h2{
+            color: antiquewhite;
+        }
+        h3{
+            text-align: center;
+            color:rgb(83, 82, 82);
+            font-size: 70px;
+        }
+        h4{
+            margin-left: 5%;
+            color:rgb(83, 82, 82);
+            font-size: 40px;
+        }
+        h5{
+            margin-left: 10%;
+            color:rgb(83, 82, 82);
+            font-size: 27px;
+        }
+    </style>
+<body>
+    <img src="" alt="">
+    <div id="left"><h1>curriculum</h1></div>
+    <div id="right"></div>
+    
+</body>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    let url=localStorage.getItem("url");
+    xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    myFunction(myArr);
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out1='<br><br><br><br><br><img src="'+arr[0].foto+'"><br><br><h1>'+arr[0].nome+" "+arr[0].cognome+'</h1><br><h2>'+arr[0].dataNascita+'</h2><h2>'+arr[0].mail+'</h2><h2>'+arr[0].telefono+'</h2>'
+    document.getElementById("left").innerHTML = out1
+    var out2='<h3>CURRICULUM</h3><br><br><h4>FORMAZIONE SCOLASTICA</h4><h5>'+arr[0].formazioneScolastica+'</h5><br><h4>ESPERIENZE LAVORATIVE</h4><h5>'+arr[0].lavoro+'</h5>'
+    document.getElementById("right").innerHTML = out2
+}
+</script>
+</html>

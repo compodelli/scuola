@@ -1,0 +1,89 @@
+<html>
+
+<style>
+
+img{
+  height: 15%;
+
+}
+body{
+  background-image: linear-gradient(rgb(208, 208, 208),rgb(95, 93, 93) );
+  color: #035158;  
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+}
+#t{
+  border-radius: 10px;
+  margin-top: 4%;
+  vertical-align: middle;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  height: 40%;
+  width: 60%;
+  background-color: #93a996;
+  color: rgb(0, 0, 0);
+}
+#t,td{
+  border: 3px solid;
+  border-color:#035158;
+}
+h1{
+  text-decoration: underline;
+}
+#t2{
+text-align: center;
+height: 100%;
+width: 100%;
+color: black;
+border: 0 px solid;
+}
+#td2{
+border: 0px solid;
+}
+
+
+</style>
+
+<body>
+<br><h1>I NOSTRI COMPAGNI</h1>
+<div id="id01"></div>
+
+
+
+</body>
+
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/anagraficaGruppo.json";
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    myFunction(myArr);
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+  var out = '<table id="t" align="center"><tr><td><h2>NOME</h2></td><td><h2>COGNOME</h2></td><td><h2>CF</h2></td><td><h2>INDIRIZZO</h2></td><td><h2>CONTATTI</h2></td><td><h2>FOTO</h2></td></tr>';
+  var i;
+  for(i = 0; i < arr.length; i++) {
+    out += '<tr id="tr01"><td>'+ arr[i].nome+'</td><td>'+ arr[i].cognome+'</td><td>'+ arr[i].CF+'</td><td>'+ arr[i].indirizzo+'</td><td><table id="t2"><tr><td id="td2">MAIL:'+ arr[i].contatti[0].mail+'</td></tr><tr><td id="td2">CELLULARE:'+ arr[i].contatti[0].mobile+'</td></tr></table><td><img onclick=gen("'+arr[i].cv+'") src='+arr[i].foto+' alt=""></td></tr>';
+  }
+  out+="</table>";
+  document.getElementById("id01").innerHTML = out;
+  
+
+}
+  function gen(urli){
+  localStorage.setItem("url",urli);
+  document.location.href="b.html"
+}
+</script>
+
+
+</html>
