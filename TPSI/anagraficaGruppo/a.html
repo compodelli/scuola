@@ -74,10 +74,10 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function myFunction(arr) {
-  var out = '<table id="t" align="center"><tr><td><h2>NOME</h2></td><td><h2>COGNOME</h2></td><td><h2>CF</h2></td><td><h2>INDIRIZZO</h2></td><td><h2>CONTATTI</h2></td><td><h2>FOTO</h2></td></tr>';
+  var out = '<table id="t" align="center"><tr><td><h2>NOME</h2></td><td><h2>COGNOME</h2></td><td><h2>CF</h2></td><td><h2>INDIRIZZO</h2></td><td><h2>CONTATTI</h2></td><td><h2>FOTO</h2></td><td><h2>FOTO</h2></td></tr>';
   var i;
   for(i = 0; i < arr.length; i++) {
-    out += '<tr id="tr0"><td>'+ arr[i].nome+'</td><td>'+ arr[i].cognome+'</td><td>'+ arr[i].CF+'</td><td>'+ arr[i].indirizzo+'</td><td><table id="t2"><tr><td id="td2">MAIL:'+ arr[i].contatti[0].mail+'</td></tr><tr><td id="td2">CELLULARE:'+ arr[i].contatti[0].mobile+'</td></tr></table><td><img onclick=gen("'+arr[i].cv+'") src='+arr[i].foto+' alt=""></td></tr>';
+    out += '<tr id="tr0"><td>'+ arr[i].nome+'</td><td>'+ arr[i].cognome+'</td><td>'+ arr[i].CF+'</td><td>'+ arr[i].indirizzo+'</td><td><table id="t2"><tr><td id="td2">MAIL:'+ arr[i].contatti[0].mail+'</td></tr><tr><td id="td2">CELLULARE:'+ arr[i].contatti[0].mobile+'</td></tr></table><td><img onclick=gen("'+arr[i].cv+'") src='+arr[i].foto+' alt=""></td><td><h2>FOTO</h2></td></tr>';
   }
   out+="</table>";
   document.getElementById("id01").innerHTML = out;
