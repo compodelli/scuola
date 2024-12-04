@@ -49,7 +49,7 @@
     let url=localStorage.getItem("url2");
     xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    myFunction(this);
+    myFunction(xmlhttp);
   }
 };
 xmlhttp.open("GET", url, true);
