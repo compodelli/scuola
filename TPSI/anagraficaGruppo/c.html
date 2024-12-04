@@ -52,15 +52,14 @@
     myFunction(this);
   }
 };
-filehttp.open("GET", url, true);
-filehttp.send();
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
 function myFunction(file) {
-    var xmlDoc;
-    xmlDoc=file.responseText;
-    
-    document.getElementById("a").innerHTML = xmlDoc
-    
-}
+        var xmlDoc = file.responseXML; // Parsing del file XML
+        var nome = xmlDoc.getElementsByTagName("nome")[0].childNodes[0].nodeValue; // Estrai il valore di <nome>
+        
+        document.getElementById("a").innerHTML = nome; // Mostra il nome nella pagina HTML
+    }
 </script>
 </html>
