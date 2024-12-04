@@ -58,10 +58,9 @@ filehttp.send();
 function myFunction(file) {
     var xmlDoc;
     xmlDoc=file.responseText;
-    var out1='<br><br><br><br><br><img src="'+arr[0].foto+'"><br><br><h1>'+arr[0].nome+" "+arr[0].cognome+'</h1><br><h2>'+arr[0].dataNascita+'</h2><h2>'+arr[0].mail+'</h2><h2>'+arr[0].telefono+'</h2>'
+    
     document.getElementById("left").innerHTML = xmlDoc
-    var out2='<h3>CURRICULUM</h3><br><br><h4>FORMAZIONE SCOLASTICA</h4><h5>'+arr[0].formazioneScolastica+'</h5><br><h4>ESPERIENZE LAVORATIVE</h4><h5>'+arr[0].lavoro+'</h5>'
-    document.getElementById("right").innerHTML = out2
+    
 }
 </script>
 </html>
