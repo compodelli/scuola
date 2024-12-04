@@ -4,7 +4,7 @@
             float: left;
             width: 25%;
             height: 100%;
-            background-color: rgb(255, 0, 0);
+            background-color: rgb(83, 82, 82);
             text-align: center;
         }
         #right{
@@ -25,7 +25,7 @@
         }
         h3{
             text-align: center;
-            color:rgb(255, 0, 0);
+            color:rgb(83, 82, 82);
             font-size: 70px;
         }
         h4{
@@ -59,7 +59,7 @@ function myFunction(file) {
         var xmlDoc = file.responseXML; // Parsing del file XML
         var nome = xmlDoc.getElementsByTagName("nome")[0].childNodes[0].nodeValue; // Estrai il valore di <nome>
         
-        document.getElementById("a").innerHTML = nome; // Mostra il nome nella pagina HTML
+        document.getElementById("a").innerHTML = "nome"; // Mostra il nome nella pagina HTML
     }
 </script>
 </html>
