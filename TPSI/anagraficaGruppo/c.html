@@ -56,10 +56,10 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function myFunction(file) {
-       // var xmlDoc = file.responseXML; // Parsing del file XML
-       // var nome = xmlDoc.getElementsByTagName("nome")[0].childNodes[0].nodeValue; // Estrai il valore di <nome>
+        var xmlDoc = file.responseXML; // Parsing del file XML
+    //    var nome = xmlDoc.getElementsByTagName("nome")[0].childNodes[0].nodeValue; // Estrai il valore di <nome>
         
-        document.getElementById("aa").innerHTML = "nome"; // Mostra il nome nella pagina HTML
+        document.getElementById("aa").innerHTML = xmlDoc; // Mostra il nome nella pagina HTML
     }
 </script>
 </html>
