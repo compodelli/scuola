@@ -45,30 +45,50 @@
     
 </body>
 <script>
-    var xmlhttp = new XMLHttpRequest();
+    
     let url=localStorage.getItem("url2");
-    xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-   // myFunction(this);
-   var file=JSON.parse(this.responseText);
-   console.log(file);
-   var num=0;
-   console.log(file[num])
-   document.getElementById("aa").innerHTML=file[num]["nome"]
-  }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+        // Funzione per caricare il file XML
+        function caricaXML() {
+            // Crea una nuova richiesta HTTP
+            var xhr = new XMLHttpRequest();
+            
+            // Definisci il tipo di richiesta e l'URL del file XML
+            xhr.open("GET", "url", true);
 
-function myFunction(file) {
-    alert("asdsad")
-        var xmlDoc = file.responseXML; // Parsing del file XML
-        alert(xmlDoc)
-        // Estrai il valore di <nome>
-            var nomeElement = xmlDoc.getElementsByTagName("nome")[0];
-        
-            var nome = nomeElement.childNodes[0].nodeValue; //
-        document.getElementById("aa").innerHTML = nome; // Mostra il nome nella pagina HTML
-    }
-</script>
+            // Gestore dell'evento quando la richiesta è completata
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Se la richiesta ha avuto successo (status 200)
+                    var xmlDoc = xhr.responseXML;  // Ottieni il documento XML
+
+                    // Ora possiamo lavorare con l'XML. Ad esempio, vogliamo stampare tutti gli elementi.
+                    var contenuto = "";
+                    var elementi = xmlDoc.getElementsByTagName("nome");
+                    
+                    for (var i = 0; i < elementi.length; i++) {
+                        contenuto += "<p>Nome: " + elementi[i].getElementsByTagName("name")[0].textContent + "</p>";
+                       // contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("description")[0].textContent + "</p><hr>";
+                    }
+
+                    // Mostra il contenuto nell'HTML
+                    document.getElementById("aa").innerHTML = contenuto;
+                } else {
+                    console.error("Errore nel caricamento del file XML");
+                }
+            };
+
+            // Gestore degli errori (in caso di problemi con la richiesta)
+            xhr.onerror = function () {
+                console.error("Si è verificato un errore durante la richiesta.");
+            };
+
+            // Invia la richiesta
+            xhr.send();
+        }
+
+        // Chiama la funzione per caricare il file XML al caricamento della pagina
+        window.onload = function () {
+            caricaXML();
+        };
+    </script>
 </html>
