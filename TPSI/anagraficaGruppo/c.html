@@ -1,58 +1,22 @@
-<html>
-    <style>
-        #left{
-            float: left;
-            width: 25%;
-            height: 100%;
-            background-color: rgb(83, 82, 82);
-            text-align: center;
-        }
-        #right{
-            float: right;
-            width: 75%;
-            height: 100%;
-            background-color: antiquewhite;
-        }
-        img{
-            width: 60%;
-        }
-        h1{
-            color: antiquewhite;
-            font-size:40px;
-        }
-        h2{
-            color: antiquewhite;
-        }
-        h3{
-            text-align: center;
-            color:rgb(83, 82, 82);
-            font-size: 70px;
-        }
-        h4{
-            margin-left: 5%;
-            color:rgb(83, 82, 82);
-            font-size: 40px;
-        }
-        h5{
-            margin-left: 10%;
-            color:rgb(83, 82, 82);
-            font-size: 27px;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leggere e Stampare XML</title>
+</head>
 <body>
-    <p id="aa"></p>
-    
-</body>
-<script>
-    
-    let url=localStorage.getItem("url2");
+    <h1>Leggere e Stampare XML con XMLHttpRequest</h1>
+    <div id="xmlContent"></div>
+
+    <script>
         // Funzione per caricare il file XML
         function caricaXML() {
             // Crea una nuova richiesta HTTP
             var xhr = new XMLHttpRequest();
             
             // Definisci il tipo di richiesta e l'URL del file XML
-            xhr.open("GET", "url", true);
+            xhr.open("GET", "https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ayoub.xml", true);
 
             // Gestore dell'evento quando la richiesta è completata
             xhr.onload = function () {
@@ -70,7 +34,7 @@
                     }
 
                     // Mostra il contenuto nell'HTML
-                    document.getElementById("aa").innerHTML = contenuto;
+                    document.getElementById("xmlContent").innerHTML = contenuto;
                 } else {
                     console.error("Errore nel caricamento del file XML");
                 }
@@ -90,4 +54,5 @@
             caricaXML();
         };
     </script>
+</body>
 </html>
