@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <soggetto>
-    
-    
+    <persona>
+    <nome>ay</nome>
+    </persona>
+
     <item>
         <name>Item 1</name>
         <description>Descrizione dell'Item 1</description>
