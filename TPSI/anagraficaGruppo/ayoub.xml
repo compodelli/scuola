@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items>
-    <persona>
-        <nome>Ayoub El Koraichi</nome>
-        <data>03/03/2006</data>
-        <telefono> 34705835</telefono>
-    </persona>
+    
     <item>
         <name>Item 1</name>
         <description>Descrizione dell'Item 1</description>
