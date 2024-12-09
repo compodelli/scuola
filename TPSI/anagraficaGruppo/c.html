@@ -27,6 +27,14 @@
                     // Ora possiamo lavorare con l'XML. Ad esempio, vogliamo stampare tutti gli elementi.
                     var contenuto = "";
 
+
+
+                    var person = xmlDoc.getElementsByTagName("persona");
+                    
+                    for (var i = 0; i < person.length; i++) {
+                        contenuto += "<p>Nome: " + person[i].getElementsByTagName("nome")[0].textContent + "</p>";
+                        contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("nome")[0].textContent + "</p><hr>";
+                    }
                   //  var pers=xmlDoc.getElementsByTagNameNS("persona")
                   //  contenuto+="<p>"+pers[0].getElementsByTagName("nome")[0].textContent+"</p>";
                     var elementi = xmlDoc.getElementsByTagName("item");
