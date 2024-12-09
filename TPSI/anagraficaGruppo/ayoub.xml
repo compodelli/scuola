@@ -6,16 +6,16 @@
     </persona>
 
 
-    <item>
+    <lavoro>
         <name>Item 1</name>
         <description>Descrizione dell'Item 1</description>
-    </item>
-    <item>
+    </lavoro>
+    <lavoro>
         <name>Item 2</name>
         <description>Descrizione dell'Item 2</description>
-    </item>
-    <item>
+    </lavoro>
+    <lavoro>
         <name>Item 3</name>
         <description>Descrizione dell'Item 3</description>
-    </item>
+    </lavoro>
 </soggetto>
