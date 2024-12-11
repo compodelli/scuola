@@ -14,9 +14,9 @@
         function caricaXML() {
             // Crea una nuova richiesta HTTP
             var xhr = new XMLHttpRequest();
-            
+            var url=localStorage.getItem("url2")
             // Definisci il tipo di richiesta e l'URL del file XML
-            xhr.open("GET", "ayoub.xml", true);
+            xhr.open("GET", url , true);
 
             // Gestore dell'evento quando la richiesta è completata
             xhr.onload = function () {
