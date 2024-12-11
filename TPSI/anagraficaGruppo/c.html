@@ -33,15 +33,15 @@
                     
                     for (var i = 0; i < person.length; i++) {
                         contenuto += "<p>Nome: " + person[i].getElementsByTagName("nome")[0].textContent + "</p>";
-                        contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("nome")[0].textContent + "</p><hr>";
+                        contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("cognome")[0].textContent + "</p><hr>";
                     }
                   //  var pers=xmlDoc.getElementsByTagNameNS("persona")
                   //  contenuto+="<p>"+pers[0].getElementsByTagName("nome")[0].textContent+"</p>";
                     var elementi = xmlDoc.getElementsByTagName("Lavoro");
                     
                     for (var i = 0; i < elementi.length; i++) {
-                        contenuto += "<p>Nome: " + elementi[i].getElementsByTagName("name")[0].textContent + "</p>";
-                        contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("description")[0].textContent + "</p><hr>";
+                        contenuto += "<p>Nome: " + elementi[i].getElementsByTagName("nameL")[0].textContent + "</p>";
+                        contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("linkL")[0].textContent + "</p><hr>";
                     }
 
                     // Mostra il contenuto nell'HTML
