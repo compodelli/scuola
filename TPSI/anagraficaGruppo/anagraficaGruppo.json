@@ -10,7 +10,7 @@
         }],
         "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/IMG_4794.jpeg",
         "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ayoub.json",
-        "portf":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ayoub.xml"
+        "portf":"ayoub.xml"
     },
     {
         "nome":"Gabriele",
@@ -23,7 +23,7 @@
         }],
         "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/Ghi.JPG",
         "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ghidoni.json",
-         "portf":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/ghidoni.xml"
+         "portf":"ghidoni.xml"
     },
     {
         "nome":"CHAT",
@@ -36,6 +36,6 @@
         }],
         "foto":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/foto/chat.png",
         "cv":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/chat.json",
-         "portf":"https://raw.githubusercontent.com/compodelli/scuola/refs/heads/main/TPSI/anagraficaGruppo/chat.xml"
+         "portf":"chat.xml"
     }
 ]
