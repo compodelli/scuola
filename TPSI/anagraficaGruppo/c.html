@@ -50,35 +50,29 @@
     <script>
         // Funzione per caricare il file XML
         function caricaXML() {
-            // Crea una nuova richiesta HTTP
+            
             var xhr = new XMLHttpRequest();
             var url=localStorage.getItem("url2")
-            // Definisci il tipo di richiesta e l'URL del file XML
+           
             xhr.open("GET", url , true);
 
-            // Gestore dell'evento quando la richiesta è completata
+          
             xhr.onload = function () {
                 if (xhr.status === 200) {
-                    // Se la richiesta ha avuto successo (status 200)
-                    var xmlDoc = xhr.responseXML;  // Ottieni il documento XML
-
-                    // Ora possiamo lavorare con l'XML. Ad esempio, vogliamo stampare tutti gli elementi.
-                  //  var contenuto = "";
-
+                    
+                    var xmlDoc = xhr.responseXML; 
 
 
                     var person = xmlDoc.getElementsByTagName("persona");
                     
                     for (var i = 0; i < person.length; i++) {
-                       // contenuto += "<p>Nome: " + person[i].getElementsByTagName("nome")[0].textContent + "</p>";
-                       // contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("cognome")[0].textContent + "</p><hr>";
+                  
                         var out1='<br><br><br><br><br><img src="'+person[i].getElementsByTagName("foto")[0].textContent+'"><br><br><h1>'+person[i].getElementsByTagName("nome")[0].textContent+" "+person[i].getElementsByTagName("cognome")[0].textContent+'</h1><br><h2>'+person[i].getElementsByTagName("dataN")[0].textContent+'</h2><br><br><br>'
                 
                     }
 
                     document.getElementById("left").innerHTML = out1
-                  //  var pers=xmlDoc.getElementsByTagNameNS("persona")
-                  //  contenuto+="<p>"+pers[0].getElementsByTagName("nome")[0].textContent+"</p>";
+                
                     var elementi = xmlDoc.getElementsByTagName("Lavoro");
 
                     var out2='<h3>PORTFOLIO</h3><br><br><h4>LAVORI ESEGUITI</h4>'
@@ -86,19 +80,18 @@
                     
                     for (var i = 0; i < elementi.length; i++) {
                         out2 += "<h5>" + elementi[i].getElementsByTagName("nameL")[0].textContent + "</h5><br>";
-                        //contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("linkL")[0].textContent + "</p><hr>";
+                        
 
-                        //<h5>'+arr[0].formazioneScolastica+'</h5>
+                        
                     }
                     document.getElementById("right").innerHTML = out2
-                    // Mostra il contenuto nell'HTML
-                   // document.getElementById("xmlContent").innerHTML = contenuto;
+                  
                 } else {
                     console.error("Errore nel caricamento del file XML");
                 }
             };
 
-            // Gestore degli errori (in caso di problemi con la richiesta)
+            
             xhr.onerror = function () {
                 console.error("Si è verificato un errore durante la richiesta.");
             };
