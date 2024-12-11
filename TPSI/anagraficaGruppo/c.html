@@ -43,7 +43,6 @@
 
 <body>
    
-    <div id="xmlContent"></div>
     <div id="left"></div>
     <div id="right"></div>
 
@@ -63,7 +62,7 @@
                     var xmlDoc = xhr.responseXML;  // Ottieni il documento XML
 
                     // Ora possiamo lavorare con l'XML. Ad esempio, vogliamo stampare tutti gli elementi.
-                    var contenuto = "";
+                  //  var contenuto = "";
 
 
 
@@ -92,7 +91,7 @@
                     }
                     document.getElementById("right").innerHTML = out2
                     // Mostra il contenuto nell'HTML
-                    document.getElementById("xmlContent").innerHTML = contenuto;
+                   // document.getElementById("xmlContent").innerHTML = contenuto;
                 } else {
                     console.error("Errore nel caricamento del file XML");
                 }
