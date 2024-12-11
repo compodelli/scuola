@@ -42,7 +42,7 @@
     </style>
 
 <body>
-    <h1>Leggere e Stampare XML con XMLHttpRequest</h1>
+   
     <div id="xmlContent"></div>
     <div id="left"><h1>PORTFOLIO</h1></div>
     <div id="right"></div>
@@ -80,12 +80,17 @@
                   //  var pers=xmlDoc.getElementsByTagNameNS("persona")
                   //  contenuto+="<p>"+pers[0].getElementsByTagName("nome")[0].textContent+"</p>";
                     var elementi = xmlDoc.getElementsByTagName("Lavoro");
+
+                    var out2='<h3>PORTFOLIO</h3><br><br><h4>LAVORI ESEGUITI</h4>'
+    
                     
                     for (var i = 0; i < elementi.length; i++) {
-                        contenuto += "<p>Nome: " + elementi[i].getElementsByTagName("nameL")[0].textContent + "</p>";
-                        contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("linkL")[0].textContent + "</p><hr>";
-                    }
+                        out2 += "<h5>" + elementi[i].getElementsByTagName("nameL")[0].textContent + "</h5><br>";
+                        //contenuto += "<p>Descrizione: " + elementi[i].getElementsByTagName("linkL")[0].textContent + "</p><hr>";
 
+                        //<h5>'+arr[0].formazioneScolastica+'</h5>
+                    }
+                    document.getElementById("right").innerHTML = out2
                     // Mostra il contenuto nell'HTML
                     document.getElementById("xmlContent").innerHTML = contenuto;
                 } else {
