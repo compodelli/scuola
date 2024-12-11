@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leggere e Stampare XML</title>
-</head>
+<html >
+    <style>
+        #left{
+            float: left;
+            width: 25%;
+            height: 100%;
+            background-color: rgb(83, 82, 82);
+            text-align: center;
+        }
+        #right{
+            float: right;
+            width: 75%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+        img{
+            width: 60%;
+        }
+        h1{
+            color: antiquewhite;
+            font-size:40px;
+        }
+        h2{
+            color: antiquewhite;
+        }
+        h3{
+            text-align: center;
+            color:rgb(83, 82, 82);
+            font-size: 70px;
+        }
+        h4{
+            margin-left: 5%;
+            color:rgb(83, 82, 82);
+            font-size: 40px;
+        }
+        h5{
+            margin-left: 10%;
+            color:rgb(83, 82, 82);
+            font-size: 27px;
+        }
+    </style>
+
 <body>
     <h1>Leggere e Stampare XML con XMLHttpRequest</h1>
     <div id="xmlContent"></div>
+    <div id="left"><h1>PORTFOLIO</h1></div>
+    <div id="right"></div>
 
     <script>
         // Funzione per caricare il file XML
@@ -32,9 +70,13 @@
                     var person = xmlDoc.getElementsByTagName("persona");
                     
                     for (var i = 0; i < person.length; i++) {
-                        contenuto += "<p>Nome: " + person[i].getElementsByTagName("nome")[0].textContent + "</p>";
-                        contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("cognome")[0].textContent + "</p><hr>";
+                       // contenuto += "<p>Nome: " + person[i].getElementsByTagName("nome")[0].textContent + "</p>";
+                       // contenuto += "<p>Descrizione: " + person[i].getElementsByTagName("cognome")[0].textContent + "</p><hr>";
+                        var out1='<br><br><br><br><br><img src="'+person[i].getElementsByTagName("foto")[0].textContent+'"><br><br><h1>'+person[i].getElementsByTagName("nome")[0].textContent+" "+person[i].getElementsByTagName("cognome")[0].textContent+'</h1><br><h2>'+person[i].getElementsByTagName("dataN")[0].textContent+'</h2>'
+                
                     }
+
+                    document.getElementById("left").innerHTML = out1
                   //  var pers=xmlDoc.getElementsByTagNameNS("persona")
                   //  contenuto+="<p>"+pers[0].getElementsByTagName("nome")[0].textContent+"</p>";
                     var elementi = xmlDoc.getElementsByTagName("Lavoro");
