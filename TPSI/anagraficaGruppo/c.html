@@ -49,22 +49,22 @@
     <div id="right"></div>
 
     <script>
-        // Funzione per caricare il file XML
+        
         function caricaXML() {
             
-            var xhr = new XMLHttpRequest();
+            var richiesta = new XMLHttpRequest();
             var url=localStorage.getItem("url2")
            
-            xhr.open("GET", url , true);
+            richiesta.open("GET", url , true);
 
           
-            xhr.onload = function () {
-                if (xhr.status === 200) {
+            richiesta.onload = function () {
+                if (richiesta.status === 200) {
                     
-                    var xmlDoc = xhr.responseXML; 
+                    var file = richiesta.responseXML; 
 
 
-                    var person = xmlDoc.getElementsByTagName("persona");
+                    var person = file.getElementsByTagName("persona");
                     
                     for (var i = 0; i < person.length; i++) {
                   
@@ -74,13 +74,13 @@
 
                     document.getElementById("left").innerHTML = out1
                 
-                    var elementi = xmlDoc.getElementsByTagName("Lavoro");
+                    var elementi = file.getElementsByTagName("Lavoro");
 
                     var out2='<h3>PORTFOLIO</h3><br><br><h4>LAVORI ESEGUITI</h4>'
     
                     
                     for (var i = 0; i < elementi.length; i++) {
-                        out2 += "<h5>" + elementi[i].getElementsByTagName("nameL")[0].textContent + "</h5><br>";
+                        out2 += "<a href="+elementi[i].getElementsByTagName("linkL")[0].textContent+"><h5>" + elementi[i].getElementsByTagName("nameL")[0].textContent + "</h5></a><br>";
                         
 
                         
@@ -93,15 +93,15 @@
             };
 
             
-            xhr.onerror = function () {
+            richiesta.onerror = function () {
                 console.error("Si è verificato un errore durante la richiesta.");
             };
 
-            // Invia la richiesta
-            xhr.send();
+            
+            richiesta.send();
         }
 
-        // Chiama la funzione per caricare il file XML al caricamento della pagina
+        
         window.onload = function () {
             caricaXML();
         };
