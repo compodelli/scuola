@@ -10,15 +10,11 @@
 
 
     <Lavoro>
-        <nameL>balzatore di verifiche</nameL>
-        <linkL>Descrizione dell'Item 1</linkL>
+        <nameL>valutatore video YouTude</nameL>
+        <linkL>https://www.youtube.com</linkL>
     </Lavoro>
     <Lavoro>
-        <nameL>truffatore</nameL>
-        <linkL>Descrizione dell'Item 1</linkL>
-    </Lavoro>
-    <Lavoro>
-        <nameL>Item 1</nameL>
-        <linkL>Descrizione dell'Item 1</linkL>
+        <nameL>ricercatore</nameL>
+        <linkL>www.wikipedia.com</linkL>
     </Lavoro>
 </soggetto>
