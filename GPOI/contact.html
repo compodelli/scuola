@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contatta il nostro team per qualsiasi domanda o richiesta riguardo ai nostri prodotti.">
+    <title>Contatti - Lemon Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.webp" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.webp" alt="Lemon Hub Logo" style="border-radius: 50%;margin-left: 15%;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">Chi Siamo</a></li>
+                <li><a href="blog.html">Info Aziendali</a></li>
+                <li><a href="contact.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contatti Section -->
+    <section id="contact">
+        <h2>Contattaci</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn">Invia</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lemon Hub - Limoncello Artigianale</p>
+    </footer>
+
+</body>
+</html>
